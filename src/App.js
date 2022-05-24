@@ -17,7 +17,6 @@ function App() {
     const [casesType, setCasesType] = useState('cases')
     const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 })
     const [mapZoom, setMapZoom] = useState(3)
-    const mapRef = useRef()
 
     useEffect(() => {
         const getCountriesData = async () => {
@@ -98,7 +97,7 @@ function App() {
                     ></InfoBox>
                 </div>
 
-                <Map ref={mapRef} center={mapCenter} zoom={mapZoom}></Map>
+                <Map center={mapCenter} zoom={mapZoom}></Map>
             </div>
 
             <Card className='app__right'>
